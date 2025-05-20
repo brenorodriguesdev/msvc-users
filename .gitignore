@@ -1,0 +1,29 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of 'go build'
+/bin/
+/out/
+
+# Vendor directory
+/vendor/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Test binary
+*.test
+
+# Coverage files
+coverage.out
+
+# Dependency directories
+/pkg/mod/
+.env
+DS_Store
