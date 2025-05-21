@@ -8,6 +8,8 @@ import (
 	database "msvc-users/main/config"
 	"msvc-users/main/routes"
 
+	_ "msvc-users/docs"
+
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	swaggerFiles "github.com/swaggo/files"

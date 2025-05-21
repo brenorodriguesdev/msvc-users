@@ -9,6 +9,13 @@ import (
 	"msvc-users/utils"
 )
 
+// SignUpController.Handle
+// @Summary Cadastra um novo usuário
+// @Description Cria um usuário novo com email, senha, etc.
+// @Tags users
+// @Accept json
+// @Produce json
+// @Router /signup [post]
 func MakeSignUpController() contracts.Controller {
 	repo := repositories.NewUserRepository()
 	hasher := infra.NewBcryptHasher()

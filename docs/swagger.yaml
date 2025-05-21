@@ -1,0 +1,15 @@
+info:
+  contact: {}
+paths:
+  /signup:
+    post:
+      consumes:
+      - application/json
+      description: Cria um usuário novo com email, senha, etc.
+      produces:
+      - application/json
+      responses: {}
+      summary: Cadastra um novo usuário
+      tags:
+      - users
+swagger: "2.0"

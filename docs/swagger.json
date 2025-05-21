@@ -1,0 +1,24 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/signup": {
+            "post": {
+                "description": "Cria um usuário novo com email, senha, etc.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Cadastra um novo usuário",
+                "responses": {}
+            }
+        }
+    }
+}
