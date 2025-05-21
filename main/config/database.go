@@ -18,9 +18,12 @@ func Migrate(DB *gorm.DB) error {
 }
 
 func InitDB() *gorm.DB {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	env := os.Getenv("ENV")
+	if env == "" || env == "local" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Println("Warning: .env file not found, using default env vars")
+		}
 	}
 
 	host := os.Getenv("DB_HOST")
@@ -34,7 +37,7 @@ func InitDB() *gorm.DB {
 		host, user, pass, name, port,
 	)
 
-	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("Error connecting to the database:", err)
 	}
