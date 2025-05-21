@@ -14,6 +14,13 @@ func BadRequest(error error) *HttpResponse {
 	}
 }
 
+func Unauthorized(error error) *HttpResponse {
+	return &HttpResponse{
+		Data:       error.Error(),
+		StatusCode: 401,
+	}
+}
+
 func Ok(data interface{}) *HttpResponse {
 	return &HttpResponse{
 		Data:       data,
