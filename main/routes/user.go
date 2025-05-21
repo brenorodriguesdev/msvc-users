@@ -8,5 +8,5 @@ import (
 )
 
 func UserRoutes(r *gin.Engine) {
-	r.POST("/signup", adapters.NewAdapter(factories.MakeSignUpController()).Handle)
+	r.POST("/signup", adapters.NewAdapterHttp(factories.MakeSignUpController()).Handle)
 }

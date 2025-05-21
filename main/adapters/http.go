@@ -10,7 +10,7 @@ type Adapter struct {
 	controller contracts.Controller
 }
 
-func NewAdapter(controller contracts.Controller) *Adapter {
+func NewAdapterHttp(controller contracts.Controller) *Adapter {
 	return &Adapter{controller: controller}
 }
 
